@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{48A388AF-9D6D-48BC-9CBE-7D7F04B5C73C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Tutorial-HelloWorld</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PcapPlusPlusPropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PcapPlusPlusPropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PcapPlusPlusPropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PcapPlusPlusPropertySheet.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(PcapPlusPlusHome)\header;$(PcapSdkHome)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\project\huawei\IPv6\WpdPack\Lib;$(PcapPlusPlusHome)\x86\Debug;$(PcapSdkHome)\Lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(PcapPlusPlusHome)\ExampleProject\Debug\x86</OutDir>
+    <IntDir>$(PcapPlusPlusHome)\ExampleProject\Debug\x86</IntDir>
+    <ExternalIncludePath>E:\project\huawei\IPv6\WpdPack\Include;$(ExternalIncludePath)</ExternalIncludePath>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(PcapPlusPlusHome)\header;$(PcapSdkHome)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\project\huawei\IPv6\pcapplusplus-22.11-windows-vs2019\x86\Release;E:\project\huawei\IPv6\WpdPack\Lib;$(PcapPlusPlusHome)\x64\Debug;$(PcapSdkHome)\Lib\x64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(PcapPlusPlusHome)\ExampleProject\Debug\x64</OutDir>
+    <IntDir>$(PcapPlusPlusHome)\ExampleProject\Debug\x64</IntDir>
+    <ExternalIncludePath>E:\project\huawei\IPv6\WpdPack\Include;$(ExternalIncludePath)</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(PcapPlusPlusHome)\header;$(PcapSdkHome)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(PcapPlusPlusHome)\x86\Release;$(PcapSdkHome)\Lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(PcapPlusPlusHome)\ExampleProject\Release\x86</OutDir>
+    <IntDir>$(PcapPlusPlusHome)\ExampleProject\Release\x86</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(PcapPlusPlusHome)\header;$(PcapSdkHome)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(PcapPlusPlusHome)\x64\Release;$(PcapSdkHome)\Lib\x64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(PcapPlusPlusHome)\ExampleProject\Release\x64</OutDir>
+    <IntDir>$(PcapPlusPlusHome)\ExampleProject\Release\x64</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Ws2_32.lib;IPHLPAPI.lib;wpcap.lib;Packet.lib;Common++.lib;Packet++.lib;Pcap++.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "1_packet.pcap" "$(OutDir)" /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WINx64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Ws2_32.lib;IPHLPAPI.lib;wpcap.lib;Packet.lib;Common++.lib;Packet++.lib;Pcap++.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "1_packet.pcap" "$(OutDir)" /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Ws2_32.lib;IPHLPAPI.lib;wpcap.lib;Packet.lib;Common++.lib;Packet++.lib;Pcap++.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "1_packet.pcap" "$(OutDir)" /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WINx64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Ws2_32.lib;IPHLPAPI.lib;wpcap.lib;Packet.lib;Common++.lib;Packet++.lib;Pcap++.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "1_packet.pcap" "$(OutDir)" /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="frag.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\header\ArpLayer.h" />
+    <ClInclude Include="..\header\BgpLayer.h" />
+    <ClInclude Include="..\header\Device.h" />
+    <ClInclude Include="..\header\DhcpLayer.h" />
+    <ClInclude Include="..\header\DhcpV6Layer.h" />
+    <ClInclude Include="..\header\DnsLayer.h" />
+    <ClInclude Include="..\header\DnsLayerEnums.h" />
+    <ClInclude Include="..\header\DnsResource.h" />
+    <ClInclude Include="..\header\DnsResourceData.h" />
+    <ClInclude Include="..\header\DpdkDevice.h" />
+    <ClInclude Include="..\header\DpdkDeviceList.h" />
+    <ClInclude Include="..\header\EthDot3Layer.h" />
+    <ClInclude Include="..\header\EthLayer.h" />
+    <ClInclude Include="..\header\FtpLayer.h" />
+    <ClInclude Include="..\header\GeneralUtils.h" />
+    <ClInclude Include="..\header\getopt.h" />
+    <ClInclude Include="..\header\GreLayer.h" />
+    <ClInclude Include="..\header\GtpLayer.h" />
+    <ClInclude Include="..\header\HttpLayer.h" />
+    <ClInclude Include="..\header\IcmpLayer.h" />
+    <ClInclude Include="..\header\IcmpV6Layer.h" />
+    <ClInclude Include="..\header\IgmpLayer.h" />
+    <ClInclude Include="..\header\IpAddress.h" />
+    <ClInclude Include="..\header\IPLayer.h" />
+    <ClInclude Include="..\header\IPReassembly.h" />
+    <ClInclude Include="..\header\IPSecLayer.h" />
+    <ClInclude Include="..\header\IpUtils.h" />
+    <ClInclude Include="..\header\IPv4Layer.h" />
+    <ClInclude Include="..\header\IPv6Extensions.h" />
+    <ClInclude Include="..\header\IPv6Layer.h" />
+    <ClInclude Include="..\header\KniDevice.h" />
+    <ClInclude Include="..\header\KniDeviceList.h" />
+    <ClInclude Include="..\header\Layer.h" />
+    <ClInclude Include="..\header\LinuxNicInformationSocket.h" />
+    <ClInclude Include="..\header\LLCLayer.h" />
+    <ClInclude Include="..\header\Logger.h" />
+    <ClInclude Include="..\header\LRUList.h" />
+    <ClInclude Include="..\header\MacAddress.h" />
+    <ClInclude Include="..\header\MBufRawPacket.h" />
+    <ClInclude Include="..\header\MplsLayer.h" />
+    <ClInclude Include="..\header\NdpLayer.h" />
+    <ClInclude Include="..\header\NetworkUtils.h" />
+    <ClInclude Include="..\header\NtpLayer.h" />
+    <ClInclude Include="..\header\NullLoopbackLayer.h" />
+    <ClInclude Include="..\header\Packet.h" />
+    <ClInclude Include="..\header\PacketTrailerLayer.h" />
+    <ClInclude Include="..\header\PacketUtils.h" />
+    <ClInclude Include="..\header\PayloadLayer.h" />
+    <ClInclude Include="..\header\PcapDevice.h" />
+    <ClInclude Include="..\header\PcapFileDevice.h" />
+    <ClInclude Include="..\header\PcapFilter.h" />
+    <ClInclude Include="..\header\PcapLiveDevice.h" />
+    <ClInclude Include="..\header\PcapLiveDeviceList.h" />
+    <ClInclude Include="..\header\PcapPlusPlusVersion.h" />
+    <ClInclude Include="..\header\PcapRemoteDevice.h" />
+    <ClInclude Include="..\header\PcapRemoteDeviceList.h" />
+    <ClInclude Include="..\header\PfRingDevice.h" />
+    <ClInclude Include="..\header\PfRingDeviceList.h" />
+    <ClInclude Include="..\header\PointerVector.h" />
+    <ClInclude Include="..\header\PPPoELayer.h" />
+    <ClInclude Include="..\header\ProtocolType.h" />
+    <ClInclude Include="..\header\RadiusLayer.h" />
+    <ClInclude Include="..\header\RawPacket.h" />
+    <ClInclude Include="..\header\RawSocketDevice.h" />
+    <ClInclude Include="..\header\SdpLayer.h" />
+    <ClInclude Include="..\header\SingleCommandTextProtocol.h" />
+    <ClInclude Include="..\header\SipLayer.h" />
+    <ClInclude Include="..\header\SllLayer.h" />
+    <ClInclude Include="..\header\SomeIpLayer.h" />
+    <ClInclude Include="..\header\SomeIpSdLayer.h" />
+    <ClInclude Include="..\header\SSHLayer.h" />
+    <ClInclude Include="..\header\SSLCommon.h" />
+    <ClInclude Include="..\header\SSLHandshake.h" />
+    <ClInclude Include="..\header\SSLLayer.h" />
+    <ClInclude Include="..\header\StpLayer.h" />
+    <ClInclude Include="..\header\SystemUtils.h" />
+    <ClInclude Include="..\header\TablePrinter.h" />
+    <ClInclude Include="..\header\TcpLayer.h" />
+    <ClInclude Include="..\header\TcpReassembly.h" />
+    <ClInclude Include="..\header\TelnetLayer.h" />
+    <ClInclude Include="..\header\TextBasedProtocol.h" />
+    <ClInclude Include="..\header\TimespecTimeval.h" />
+    <ClInclude Include="..\header\TLVData.h" />
+    <ClInclude Include="..\header\UdpLayer.h" />
+    <ClInclude Include="..\header\VlanLayer.h" />
+    <ClInclude Include="..\header\VxlanLayer.h" />
+    <ClInclude Include="..\header\WakeOnLanLayer.h" />
+    <ClInclude Include="..\header\WinPcapLiveDevice.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
